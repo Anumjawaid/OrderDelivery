@@ -1,0 +1,17 @@
+.landimg{
+    background-image: url('../UI/dateslan.JPG');
+    background-color: aliceblue;
+    padding:150px;
+    background-repeat: no-repeat;
+    background-position: 1%;
+    background-size: cover;
+    color:white;
+    
+    
+}
+.navbar-brand{
+    margin-left: 30px !important;
+}
+.card{
+    margin-bottom: 30px;
+}
