@@ -14,6 +14,9 @@ export default function Cart({cart,setCart}){
         setPage(nextpage)
 
     }
+    const remove = ()=>{
+        console.log("i am working")
+    }
 
     return(
         <div>
@@ -30,7 +33,7 @@ export default function Cart({cart,setCart}){
                             {/* <img src={b[i] }alt="" className="card-img-top"/> */}
                             <div className="card-body"><h5 className="card-title">{v['name']}</h5>
                             <p className='card-text'> Price:{v['price']} Quantity {v['quantity']}</p></div>
-                            <button>Remove Item</button>
+                            <button onClick={remove}>Remove Item</button>
                         </div>
                     </div>
                 </div>
