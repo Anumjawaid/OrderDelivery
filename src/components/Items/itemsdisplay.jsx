@@ -239,28 +239,11 @@ export default function Items () {
         </div>
         
   
-        </div> ) : <Cart cart={cart} setcart={setCart}></Cart> }
+        </div> ) : <Cart cart={cart} setcart={()=>setCart}></Cart> }
 
         </div>
     )
 
 
 }
-const Order = ()=>{
-  // console.log(Orderlist,"fghj")
-  return(
-  <div className="container">
-    <div className="row">
-      <div className="col-sm-12">
-        <h4>Please Fill in your Details</h4>
-        <input type="text" name="" placeholder='Enter Your Name' id=""/>
-        <input type="number" name="" placeholder='Enter Your Phone number' id=""/>
-        <button type="submit">Place Order</button>
-      </div>
-    </div>
-   
-  </div>
-  )
 
-}
-export {Items,Order}
