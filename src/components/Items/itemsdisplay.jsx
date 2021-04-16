@@ -80,10 +80,7 @@ export default function Items () {
         console.log("last else")
         setCart([...cart,cartitems])
       }
-      // nc[a].quantity+=1
-
-      // setCart(nc)
-      // console.log(nc)
+      
 
     }
     console.log(cart)
@@ -107,20 +104,15 @@ export default function Items () {
     return (
       <div>
         { page===ITEMS ? (
+          <div className='totalstart'>
         <div className='a' >
-          
-        
-        <div className="header">
-        <nav className="navbar navbar-light bg-light">
-  <div className="container">
+           <div className="header">
+        <nav className="navbar">
+ 
     <a className="navbar-brand" href="#" >
       <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
     </a>
     <a href="#" className="btn btn-primary" onClick={()=>navigateto(CART)}>Place Your Order</a>
-    
-    
-
-  </div>
 </nav>
         </div>
          
@@ -134,6 +126,9 @@ export default function Items () {
             </div>
             </div>
         </div>
+        </div>
+
+        {/*  */}
         <div className="container">
         <h3>What We Are Offering</h3>
                 <div className="row">
@@ -143,104 +138,47 @@ export default function Items () {
                     <div className="col-sm-4" key={i}>
                         <div className="card" style={{width: "18rem"}}>
                             <img src={b[i] }alt="" className="card-img-top"/>
-                            <div className="card-body"><h5 className="card-title">{v['name']}</h5>
-                            <p className='card-text'>{v['desc']} Price:{v['price']}</p></div>
+                            <div className="card-body">
+                              <h5 className="card-title">{v['name']}</h5>
+                            <p className='card-text'>{v['desc']} Price:{v['price']}</p>
+                            </div>
                             <a href="#" className="btn btn-primary"key={i} onClick={()=>AddtoCart(v)}>Add To Cart</a>
                         </div>
                     </div>
                 
-        )) : <h3>Cooking</h3>}
+        )) : 
+        
+        <div><h3>Cooking</h3>
+        <a href="#" className="btn btn-primary">Click Here To Start Cooking Foods</a>
+        </div>
+
+        
+        
+        }
+
+
         </div>
         </div>
-        {/* cards */}
-        <div className="container">
-            {/* for dates */}
-            <div className="row">
-                <div className="col-sm-4">
-                    
-                    {/* 1st */}
-                    <div className="card" style={{width: "18rem"}}>
-  <img src={DatesLand} className="card-img-top" alt="..."/>
-  <div className="card-body">
-    <h5 className="card-title">Chicken Roll</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary" onClick={p}>Order Now</a>
-  </div>
-</div>
-</div>
-{/* 2nd */}
-<div className="col-sm-4">
-<div className="card" style={{width: "18rem"}}>
-  <img src={DatesLand}class="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">Samosay</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Order Now</a>
-  </div>
-</div>
-</div>
-
-{/* 3rd */}
-<div className="col-sm-4">
-<div className="card" style={{width: "18rem"}}>
-  <img src={DatesLand} className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">Spring Roll</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Order Now</a>
-  </div>
-</div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-             {/* for roll */}
-            <div className="row">
-                <div className="col-sm-4">
-                    {/* 1st */}
-                    <div className="card" style={{width: "18rem"}}>
-  <img src={Roll} className="card-img-top" alt="..."/>
-  <div className="card-body">
-    <h5 className="card-title">Chicken Roll</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Order Now</a>
-  </div>
-</div>
-</div>
-{/* 2nd */}
-<div className="col-sm-4">
-<div className="card" style={{width: "18rem"}}>
-  <img src={Sam}class="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">Samosay</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Order Now</a>
-  </div>
-</div>
-</div>
-
-{/* 3rd */}
-<div className="col-sm-4">
-<div className="card" style={{width: "18rem"}}>
-  <img src={Roll} className="card-img-top" alt="..." />
-  <div className="card-body">
-    <h5 className="card-title">Spring Roll</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Order Now</a>
-  </div>
-</div>
-                </div>
-            </div>
         </div>
+           
+
+
+
+
+
+
+
+         
         
   
-        </div> ) : <Cart cart={cart} setcart={()=>setCart}></Cart> }
+         )
+        
+        
+         : <Cart cart={cart} setCart={setCart}></Cart> }
 
+        
+        
+        {/* end of function */}
         </div>
     )
 
