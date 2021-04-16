@@ -1,6 +1,6 @@
 .landimg{
-    background-image: url('../UI/dateslan.JPG');
-    background-color: aliceblue;
+    /* background-image: url('../UI/dateslan.JPG'); */
+    /* background-color: aliceblue; */
     padding:150px;
     background-repeat: no-repeat;
     background-position: 1%;
@@ -9,8 +9,15 @@
     
     
 }
+.navbar{
+    /* background-color: rgba(2, 122, 48)!important; */
+    /* background-color: rgba(2, 122, 48, 0.856)!important; */
+    background-image: none;
+    color:white;
+}
 .navbar-brand{
     margin-left: 30px !important;
+    color:white;
 }
 .card{
     margin-bottom: 30px;
@@ -18,4 +25,10 @@
 .main{
     text-align: center;
     justify-content: center;
+}
+.a{
+    background-color:rgba(2, 122, 48, 0.856);
+    height: 500px;
+  width: 100%;
+  margin-bottom: 100px;
 }
