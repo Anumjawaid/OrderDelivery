@@ -8,6 +8,7 @@ import Sam from '../UI/samosay.JPG'
 import  {getItems} from '../Admin/index'
 import Cart from './carts'
 import {Link } from "react-router-dom";
+import Land from '../UI/landimg.png'
 
 
 export default function Items () {
@@ -117,13 +118,15 @@ export default function Items () {
         </div>
          
         <div className="landinghead">
+        <div className="landtext">
+                <h2>Frozen Food Delivery In Pakistan </h2>
+                <p>We Deliver Fresh,Delicious Mouth Tempting Food At Your Door Step</p>
+
+            </div>
             <div className="landimg">
               
            
-            <div className="landtext">
-                <h3>Fresh Delicate Sweet Dates For Ramzan At Your Doorstep</h3>
-
-            </div>
+            
             </div>
         </div>
         </div>
