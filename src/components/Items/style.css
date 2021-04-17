@@ -1,17 +1,30 @@
+.landinghead{
+    /* text-align: start; */
+    display:flex;
+    justify-content: flex-start;
+    /* flex-direction:column; */
+
+}
 .landimg{
-    /* background-image: url('../UI/dateslan.JPG'); */
-    /* background-color: aliceblue; */
-    padding:150px;
+    background-image: url('../UI/landimg.png');
+    padding:360px;
     background-repeat: no-repeat;
-    background-position: 1%;
-    background-size: cover;
-    color:white;
+    /* background-position: 1%; */
+    
     
     
 }
+.landtext{
+    color:white;
+    /* font-size: 30px; */
+    font-weight: bolder;
+    font-style: oblique;
+    margin-left:70px;
+    margin-top:70px;
+}
+
 .navbar{
-    /* background-color: rgba(2, 122, 48)!important; */
-    /* background-color: rgba(2, 122, 48, 0.856)!important; */
+    
     background-image: none;
     color:white;
 }
