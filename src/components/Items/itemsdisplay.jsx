@@ -113,7 +113,7 @@ export default function Items () {
     <a className="navbar-brand" href="#" >
       <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
     </a>
-    <a href="#" className="btn btn-primary" onClick={()=>navigateto(CART)}>Place Your Order</a>
+    <a href="#" className="btn btn-primary placeorder" onClick={()=>navigateto(CART)}>Place Your Order</a>
 </nav>
         </div>
          
@@ -133,19 +133,19 @@ export default function Items () {
 
         {/*  */}
         <div className="container">
-        <h3>What We Are Offering</h3>
+        <h3 className='headcont'>What We Are Offering</h3>
                 <div className="row">
                   
         {a.length ? a.map((v,i)=>(
             
                     <div className="col-sm-4" key={i}>
-                        <div className="card" style={{width: "18rem"}}>
-                            <img src={b[i] }alt="" className="card-img-top"/>
+                        <div className="card item" style={{width: "18rem"}}>
+                            <img src={b[i] }alt="" className="card-img-top" width='30%' height='150px'/>
                             <div className="card-body">
                               <h5 className="card-title">{v['name']}</h5>
-                            <p className='card-text'>{v['desc']} Price:{v['price']}</p>
+                            <p className='card-text'>DESCRIPTION:{v['desc']} <br></br>PRICE:{v['price']}</p>
                             </div>
-                            <a href="#" className="btn btn-primary"key={i} onClick={()=>AddtoCart(v)}>Add To Cart</a>
+                            <a href="#" className="btn btn-primary addcart"key={i} onClick={()=>AddtoCart(v)}>Add To Cart</a>
                         </div>
                     </div>
                 
@@ -159,10 +159,43 @@ export default function Items () {
         
         }
 
+        {/*  */}
+        
+
 
         </div>
         </div>
+
+        <div class="footer">
+          <div className="foot">
+          <div className="foothead">
+          <h4>KHANA PAKANA</h4>
+          <p>We Deliver fresh,Delicious Authentic food in Pakistan.<br></br>
+            We Deliver fresh,Delicious Authentic food in Pakistan.<br></br>
+            We Deliver fresh,Delicious Authentic food in Pakistan</p>
+          </div>
+        
+        <div className="tags">
+        <h4>CONTACTS</h4>
+
+          <p className='htag'>Home</p>
+          <p className='htag'>Price</p>
+          <p className='htag'>Contact</p>
+          </div>
+        {/* <ul>
+          <li>Home</li>
+          <li>Price</li>
+          <li>Contact</li>
+          </ul> */}
+          
+
+      </div>
+      <hr style={{color:'white'}}></hr>
+          <p>Copywright@khanapakana2021</p>
+          </div>
+        
         </div>
+        
            
 
 
@@ -182,6 +215,7 @@ export default function Items () {
         
         
         {/* end of function */}
+
         </div>
     )
 
