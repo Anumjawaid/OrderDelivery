@@ -1,4 +1,6 @@
 import React,{useState} from 'react'
+import Pan from '../UI/panlogo.png'
+
 import './style.css';
 
 
@@ -7,12 +9,7 @@ export default function Cart({cart,setCart}){
     ncart=cart
 
     let [page,setPage]=useState()
-    // console.log(cart[0]['name'][0],"from cart")
-    // console.log("cart",cart,ncart)
-    // ncart.map((v,i)=>(
-    //     console.log(v,"asdfgh")
-
-    //    ))
+    
     
    
     const navigateto=(nextpage)=>{
@@ -42,6 +39,15 @@ export default function Cart({cart,setCart}){
 
     return(
         <div>
+            <div className="aa">
+            <nav className="navbar">
+ 
+ <a className="navbar-brand" href="#" >
+   <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
+ </a>
+ <a href="#" className="btn btn-primary placeorder" >Place Your Order</a>
+</nav>
+</div>
             <div className="container main"><h4>Items In Cart</h4>
             <h3>Your Cart Ittems</h3>
             <button onClick={()=>setCart([])} className="btn btn-primary" >Delete Cart</button> 
