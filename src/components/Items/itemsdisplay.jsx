@@ -113,7 +113,7 @@ export default function Items () {
     <a className="navbar-brand" href="#" >
       <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
     </a>
-    <a href="#" className="btn btn-primary placeorder" onClick={()=>navigateto(CART)}>Place Your Order</a>
+    <p className="cartimage">CartImaage</p>
 </nav>
         </div>
          
@@ -129,6 +129,10 @@ export default function Items () {
             
             </div>
         </div>
+        </div>
+        <div className="orderplace">
+    <a href="#" className="btn btn-primary placeorder" onClick={()=>navigateto(CART)}>Place Your Order</a>
+          
         </div>
 
         {/*  */}
