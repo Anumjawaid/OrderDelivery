@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import Pan from '../UI/panlogo.png'
+import cartim from '../UI/cart.png'
+
 
 import './style.css';
 
@@ -27,15 +29,14 @@ export default function Cart({cart,setCart}){
         // setNcart(Object.assign({}, ncart)) this can be used as well as setNcart({...ncart})
 // 
     }
-
-    const deletecart = ()=>{
-        setNcart([])
-        console.log("delete")
+    const totalprice=()=>{
         
-        console.log("ncart",ncart,"cart",cart)
-        setCart([])
+        var tp=0
+        cart.map((v,i)=>(tp+=v['price']))
+        console.log(tp)
     }
-    
+
+
 
     return(
         <div>
@@ -45,13 +46,19 @@ export default function Cart({cart,setCart}){
  <a className="navbar-brand" href="#" >
    <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
  </a>
- <a href="#" className="btn btn-primary placeorder" >Place Your Order</a>
+ <p className="cartimage">
+      <img src={cartim} width='30px' />Items <span style={{color:'brown' ,fontSize:'20px'}}>{cart.length}</span></p>
+
 </nav>
 </div>
-            <div className="container main"><h4>Items In Cart</h4>
-            <h3>Your Cart Ittems</h3>
+            <div className="container main">
+                <div className="cartitemhead">
+            <h3>Your Cart Items</h3>
+            <div className="cartbtn">
             <button onClick={()=>setCart([])} className="btn btn-primary" >Delete Cart</button> 
-            <button>Place Your Order</button>
+            <button onClick={totalprice}>Place Your Order</button>
+            </div>
+            </div>
             {ncart.map((v,i)=>(
                 <div className="row">
 
