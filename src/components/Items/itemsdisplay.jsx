@@ -7,6 +7,7 @@ import Roll from '../UI/springroll.JPG'
 import Sam from '../UI/samosay.JPG'
 import  {getItems} from '../Admin/index'
 import Cart from './carts'
+import cartim from '../UI/cart.png'
 import {Link } from "react-router-dom";
 import Land from '../UI/landimg.png'
 
@@ -88,6 +89,7 @@ export default function Items () {
 
       
     }
+    
 
     
     const navigateto=(nextpage)=>{
@@ -96,11 +98,7 @@ export default function Items () {
 
 
     }
-    const p=(e)=>{
-      e.preventDefault()
-      console.log(e)
-
-    }
+    
    
     return (
       <div>
@@ -113,7 +111,7 @@ export default function Items () {
     <a className="navbar-brand" href="#" >
       <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
     </a>
-    <p className="cartimage">CartImaage</p>
+    <p className="cartimage"> <img src={cartim} width='30px' />Items <span style={{color:'brown' ,fontSize:'20px'}}>{cart.length}</span></p>
 </nav>
         </div>
          
@@ -136,7 +134,8 @@ export default function Items () {
         </div>
 
         {/*  */}
-        <div className="container">
+        <div className="ab">
+        <div className="container ">
         <h3 className='headcont'>What We Are Offering</h3>
                 <div className="row">
                   
@@ -152,6 +151,8 @@ export default function Items () {
                             <a href="#" className="btn btn-primary addcart"key={i} onClick={()=>AddtoCart(v)}>Add To Cart</a>
                         </div>
                     </div>
+                    
+        
                 
         )) : 
         
@@ -168,6 +169,8 @@ export default function Items () {
 
 
         </div>
+        </div>
+        
         </div>
 
         <div class="footer">
