@@ -7,6 +7,7 @@ import Roll from '../UI/springroll.JPG'
 import Sam from '../UI/samosay.JPG'
 import  {getItems} from '../Admin/index'
 import Cart from './carts'
+import Footer from './footer'
 import cartim from '../UI/cart.png'
 import {Link } from "react-router-dom";
 import Land from '../UI/landimg.png'
@@ -172,36 +173,12 @@ export default function Items () {
         </div>
         
         </div>
+        <Footer />
 
-        <div class="footer">
-          <div className="foot">
-          <div className="foothead">
-          <h4>KHANA PAKANA</h4>
-          <p>We Deliver fresh,Delicious Authentic food in Pakistan.<br></br>
-            We Deliver fresh,Delicious Authentic food in Pakistan.<br></br>
-            We Deliver fresh,Delicious Authentic food in Pakistan</p>
-          </div>
-        
-        <div className="tags">
-        <h4>CONTACTS</h4>
 
-          <p className='htag'>Home</p>
-          <p className='htag'>Price</p>
-          <p className='htag'>Contact</p>
-          </div>
-        {/* <ul>
-          <li>Home</li>
-          <li>Price</li>
-          <li>Contact</li>
-          </ul> */}
-          
-
-      </div>
-      <hr style={{color:'white'}}></hr>
-          <p>Copywright@khanapakana2021</p>
-          </div>
-        
         </div>
+
+        
         
            
 
