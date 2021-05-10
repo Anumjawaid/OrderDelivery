@@ -1,12 +1,16 @@
+
 .landinghead{
     /* text-align: start; */
     display:flex;
     justify-content: flex-start;
     /* flex-direction:column; */
+    background-image: none;
 
 }
+
 .headcont{
     margin-bottom: 30px;
+    
 }
 .landimg{
     background-image: url('../UI/landimg.png');
@@ -49,26 +53,19 @@
     
 }
 .orderplace{
-    /* position: sticky;
-    top:350px;
-    right: -1px;
-    cursor: pointer;
-    -webkit-transform-origin: 100% 100%;
-    -webkit-transform: rotate(-30deg); */
+   
     position: fixed;
-            bottom: 0px;
-            right: 0px; 
-            padding: 20px;
-            cursor: pointer;
-            float: right;
-            /* transform:translate(10%,20%); */
-            /* transform:rotate3d(-90%); */
-    /* -webkit-transform-origin: 100% 100%; */
-    -webkit-transform: translate(8%,25%);
+    bottom: 0px;
+    right: 0px; 
+    padding: 20px;
+    cursor: pointer;
+    float: right;
+    /* -webkit-transform: translate(8%,25%); */
 
 }
 .cartimage{
     color:#e9dc27;
+    font-size: 15px;
 }
 .header{
     /* position: fixed; */
@@ -82,9 +79,11 @@
     margin-right:40px;
     display: inline;
 }
-.placeorder{
+.placeorder,.del{
     /* background-color: #FF9C2E !important; */
     background-color: #e9dc27 !important;
+    border-color: #cfc202 !important;
+
 }
 .navbar-brand{
     margin-left: 30px !important;
@@ -98,9 +97,9 @@
     border-top: 100px;
     border-color: rgba(2, 122, 48, 0.856);
 }
-.addcart{
+.addcart,.remo{
     background-color: rgba(2, 122, 48, 0.856) !important;
-    border-radius: 50px;
+    border-color: #337c02 !important;
 }
 .btn-primary:hover{
     background-color: rgba(6, 172, 70, 0.856);
@@ -121,4 +120,39 @@
   width: 100%;
   
 
+}
+.cartitemhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cartcard{
+    border-color: aqua;
+    margin-bottom: 30px;
+    border-left: 30px;
+
+}
+.total{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nocart{
+    margin-top:40px;
+    
+    margin-bottom:153px;
+    margin-right:100px !important;
+    align-items:center;
+    align-content: center;
+    text-align:center;
+}
+#cartimage{
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#got{
+    width:30%;
+    padding:10px;
 }
