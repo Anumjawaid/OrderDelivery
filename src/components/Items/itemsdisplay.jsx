@@ -112,7 +112,7 @@ export default function Items () {
     <a className="navbar-brand" href="#" >
       <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
     </a>
-    <p className="cartimage"> <img src={cartim} width='30px' />Items <span style={{color:'brown' ,fontSize:'20px'}}>{cart.length}</span></p>
+    <p className="cartimage"> <img src={cartim} width='30px' />Items  { cart.length ? <span style={{color:'brown' ,fontSize:'20px'}}>{ cart.length}</span>:<span>*</span>}</p>
 </nav>
         </div>
          
