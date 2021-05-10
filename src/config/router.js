@@ -9,7 +9,7 @@ class AppRouter extends React.Component{
         return(
             <Router>
                 <Route path='/admin' component={Admin}></Route>
-                <Route exact path='/items' component={Items}></Route>
+                <Route exactpath='/items' component={Items}></Route>
                 {/* <Route path='/order' component={Order}></Route> */}
                 <Route path='/cart' component={Cart}></Route>
 
