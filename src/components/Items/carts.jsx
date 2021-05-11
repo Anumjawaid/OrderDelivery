@@ -5,13 +5,14 @@ import Footer from './footer'
 import { Link } from "react-router-dom";
 import Items from './itemsdisplay'
 import cartemp from '../UI/cartemp.JPG'
+import Info from './userinfo'
 
 
 
 import './style.css';
 
 
-export default function Cart({ cart, setCart }) {
+export default function Cart({ cart, setCart,pr }) {
     const ITEMS = '/items'
     const CART = '/cart'
     // let [ncart, setNcart] = useState()
@@ -93,7 +94,7 @@ export default function Cart({ cart, setCart }) {
                         ))}
                         <div className="col-md-12 total" style={{ marginLeft: '30px' }}>
                             <h3>SubTotal  {pr}</h3>
-                            <button className="btn btn-primary del" onClick={totalprice}>Place Your Order</button>
+                            <button className="btn btn-primary del" onClick={()=>navigateto('/userinfo')}>Place Your Order</button>
 
                         </div>
                     </div>
@@ -117,23 +118,16 @@ export default function Cart({ cart, setCart }) {
                     </>
 
                      }
-
-
-
-
-
-
-
-
-
-
-
-                    <br />
+                     <br />
                     <div className="footcart" style={{ position: 'sticky' }}>
                         <Footer />
                     </div>
                 </div>
-                : <Items></Items>
+                : page===CART ?
+                
+                <Items></Items>
+                
+                :<Info cart={cart} setCart={setCart} pr={pr}/>
                
 
             }
