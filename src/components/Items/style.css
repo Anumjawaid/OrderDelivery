@@ -79,7 +79,7 @@
     margin-right:40px;
     display: inline;
 }
-.placeorder,.del{
+.placeorder,.del,.co{
     /* background-color: #FF9C2E !important; */
     background-color: #e9dc27 !important;
     border-color: #cfc202 !important;
