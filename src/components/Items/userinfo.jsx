@@ -7,8 +7,13 @@ import Footer from './footer'
 
 
 export default function Info({ cart, setCart ,pr}) {
+
     console.log(cart,pr, "from userinfo")
 
+    const[name,setName]=useState()
+    const[email,setEmail]=useState()
+    const[phn,setPhone]=useState()
+    const[address,setAddress]=useState()
 
     return (
         <>
@@ -45,7 +50,7 @@ export default function Info({ cart, setCart ,pr}) {
                             <input type='text' placeholder="Enter Your Email" />
                             <label>Address</label>
                             <textarea type='text' placeholder="Enter Your Address" />
-                            <button btn btn-primary del>Confirm Order</button>
+                            <button className='btn btn-primary co'>Confirm Order</button>
                         </div>
                     </div>
                     <div className="col-md-6">
