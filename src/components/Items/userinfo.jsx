@@ -20,6 +20,7 @@ export default function Info({ cart, setCart ,pr}) {
 
   
     const addorder = ()=>{
+        console.log("IN ORDER")
         const order={}
         order.name=name
         order.email=email
@@ -27,8 +28,8 @@ export default function Info({ cart, setCart ,pr}) {
         order.address=address
         order.cart=cart
         setOrder(order)
-        console.log(orderd,"order")
-        firebase.database().ref('/').child('orders').push(orderd)
+        console.log(order,"order")
+        firebase.database().ref('/').child('orders').push(order)
         
     }
     return (
