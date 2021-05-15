@@ -17,6 +17,7 @@ export default function Info({ cart, setCart ,pr}) {
     const[phn,setPhone]=useState()
     const[address,setAddress]=useState()
     const[orderd,setOrder]=useState()
+    const[page,setPage]=useState('/order')
 
   
     const addorder = ()=>{
@@ -29,24 +30,33 @@ export default function Info({ cart, setCart ,pr}) {
         order.cart=cart
         setOrder(order)
         console.log(order,"order")
+        try{
         firebase.database().ref('/').child('orders').push(order)
-        
+        setPage('/thankyou')
+
+        }
+        catch{
+            setPage('/errortryagain')
+
+        }
     }
     return (
         <>
-            <div className="aa">
+        <div>
+        {
+            page==='/order' ? <div>
+                <div className="aa">
                 <nav className="navbar">
-
+ 
                     <a className="navbar-brand" href="#" >
                         <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA</a>
                     <p className="cartimage">
                         <img src={cartim} width='30px' />
                         Items{cart.length ? <span style={{ color: 'brown', fontSize: '20px' }}>
                              {cart.length}</span> : <span>*</span>}</p>
-
+ 
                 </nav>
             </div>
-            {/*  */}
             <div className="container usermain">
                 <div className="row">
                     <div className="col-md-6">
@@ -57,8 +67,7 @@ export default function Info({ cart, setCart ,pr}) {
                             <h4>We Will Deliver You with Love And Care</h4>
                             </div>
                             </div>
-
-                        <div className="col-md-4 insideinfo">
+                            <div className="col-md-4 insideinfo">
                             <label>Your Name</label>
                             <input type='text' placeholder="Enter Your Name" value={name} onChange={(e)=>setName(e.target.value)} />
                             <label>Your Phone</label>
@@ -76,8 +85,8 @@ export default function Info({ cart, setCart ,pr}) {
                             <ul>
                             {cart.map((v,i)=>(
                                 <li key={i}>Item :{v['name'] } Price :{v['price']} </li>
-
-
+ 
+ 
                             ))}
                             <li>Sub Total :{pr}</li>
                             </ul>
@@ -85,7 +94,24 @@ export default function Info({ cart, setCart ,pr}) {
                     </div>
                 </div>
             </div>
+
+
+
+
+            </div>
+            
+            :page ==='/thankyou'?
+            <div>
+                <h4>Thank you to shop with us</h4>
+            </div>
+             :
+             <div>
+            {alert("Eror Please TrY again")}
+            </div>
+        }
+            
             <Footer />
+            </div>
         </>
     )
 }
