@@ -48,9 +48,7 @@ export default function Items () {
 
       }
       var a=checkele()
-      // end of checkele
-    // var a=checkele()
-    //   console.log(i,a,"frrom add to cart")
+     
       var month=['Jan',"Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
         var d = new Date();
         var date=(d.getUTCDate()+ month[d.getMonth()]+d.getFullYear())
@@ -64,23 +62,18 @@ export default function Items () {
       console.log(index,"index")
       var cartt=[]
     if(cart.length==0 ){
-      console.log("Khali hon")
       setCart([...cart,cartitems])
     }
     else{
       if(index!=-1){
         var a=checkele()
-        console.log("idhar aya hon if dos")
-      console.log(i,a,"frrom add to cart")
-      // const nc=[...cart]
+       
       var update
       update=cart[a]
       update.quantity+=1
       update.price+=i['price']
-      // setCart(update)
       }
       else{
-        console.log("last else")
         setCart([...cart,cartitems])
       }
       
@@ -109,8 +102,8 @@ export default function Items () {
            <div className="header">
         <nav className="navbar">
  
-    <a className="navbar-brand" href="#" >
-      <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA
+    <a className="navbar-brand hh" href="#" >
+      <img src={Pan} alt="" id="pan" width="60" height="48" />KHANA PAKANA
     </a>
     <p className="cartimage"> <img src={cartim} width='30px' />Items  { cart.length ? <span style={{color:'brown' ,fontSize:'20px'}}>{ cart.length}</span>:<span>*</span>}</p>
 </nav>
@@ -123,16 +116,15 @@ export default function Items () {
 
             </div>
             <div className="landimg">
-              
-           
-            
-            </div>
+               </div>
         </div>
         </div>
         <div className="orderplace">
     <a href="#" className="btn btn-primary placeorder" onClick={()=>navigateto(CART)}>Place Your Order</a>
+
           
         </div>
+        <br />
 
         {/*  */}
         <div className="ab">
