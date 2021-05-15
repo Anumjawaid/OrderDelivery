@@ -22,7 +22,7 @@ export default function Info({ cart, setCart ,pr}) {
   
     const addorder = ()=>{
         if(name=='' || email == '' || phn =='' || address == '' ){
-            console.log("yahan if me aya hon")
+            // console.log("yahan if me aya hon")
             alert("Please Fill All Required Fields")
         }
         else{
