@@ -18,20 +18,9 @@ const  Admin = ()=>{
     const[tinvest,setTinvest]=useState()
     const[tinvestdozen,setTinvestDozen]=useState()
     const [img,setImg]=useState(null)
-    // const it=[]
-    var items={
-        // name:"",
-        // tinvest:0, //price of all
-        // tinvestdozen:"",// total dozen being bought
-        // desc:"",
-        // date:"",
-        // id:"",
-        // img:""
-    }
-//    firebase.database().ref('/').child('items').on('child_added',(s)=>{
-//         console.log(s.val(),"inside map")
-//         it.push(s.val())
-//           })
+    var items={}
+    
+
     // ADD INTO INENTORY ITEM
 const AddInvent = ()=>{
 console.log("I AM RUNNING")
@@ -56,17 +45,7 @@ setTinvest("")
 setTinvestDozen("")
 setDesc("")
 }
-const Getitems = ()=>{
-    // console.log("FF")
-//     var inven
-//    firebase.database().ref('/').child('items').on('child_added',(s)=>{
-//         console.log(s.val(),"inside map")
-//           inven=s.val()
 
-//     })
-    // console.log(a[0]['date'])
-    // console.log(s.val()[0])
-}
 const types=['image/jpeg','image/png']
 const filehandler = (e)=>{
     // console.log(e.target.value,"from file handler")  ==>fakepath
@@ -97,10 +76,10 @@ return(
         <input type="text" className="toinvest" value = {tinvest} onChange={(e)=>setTinvest(e.target.value)} placeholder="Enter Total Investment"/>
         <input type="text" className="desc" value = {tinvestdozen} onChange={(e)=>setTinvestDozen(e.target.value)} placeholder="Enter Investment Item in dozen"/>
         <input type='file' onChange={filehandler} />
-        <button onClick={Getitems}>Upload Image</button>
+        {/* <button onClick={Getitems}>Upload Image</button> */}
         <button onClick={AddInvent}>Add To Inventory</button>
-        {
-        console.log(a,"whole a")}
+        {/* {
+        console.log(a,"whole a")} */}
         </div>
     </div>
     <div className="itemlist">
