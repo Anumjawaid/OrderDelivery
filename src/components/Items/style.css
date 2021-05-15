@@ -16,7 +16,6 @@
     background-image: url('../UI/landimg.png');
     padding:360px;
     background-repeat: no-repeat;
-    /* background-position: 1%; */
     
 }
 .landtext{
@@ -207,4 +206,30 @@ ul li{
     margin-bottom: 20px;
     font-size:15px;
     font-weight: bolder;
+}
+/* responsive */
+/* for tablets 768*/
+@media only screen and (max-width: 360px) {
+    .landimg{
+        display: none;
+    }
+    .landinghead{
+        margin-left: 10px;
+        margin-right: 40px;
+        margin-bottom: 30px;
+    }
+    .orderplace{
+    margin-top: 30px;      
+    position:absolute;
+    top:0;
+    cursor: pointer;
+    }
+    .navbar-brand{
+        font-size: 1.00rem !important;
+        margin-left: 0px;
+    }
+    .pan{
+        margin-left: 0px;
+
+    }
 }
