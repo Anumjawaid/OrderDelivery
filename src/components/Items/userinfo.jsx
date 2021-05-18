@@ -3,9 +3,11 @@ import './style.css';
 import Pan from '../UI/panlogo.png'
 import cartim from '../UI/cart.png'
 import Deliver from '../UI/delivery.png'
+import Thank from '../UI/thank.png'
 import Footer from './footer'
 import firebase from '../../config/firebase'
-
+import Items from './itemsdisplay'
+import {Link} from 'react-router-dom'
 
 
 export default function Info({ cart, setCart, pr }) {
@@ -39,6 +41,7 @@ export default function Info({ cart, setCart, pr }) {
             try {
                 firebase.database().ref('/').child('orders').push(order)
                 setPage('/thankyou')
+                setCart([])
 
             }
             catch {
@@ -110,13 +113,32 @@ export default function Info({ cart, setCart, pr }) {
                     </div>
 
                         : page === '/thankyou' ?
-                            <div>
+                        <>
+                        <div className="aa">
+                            <nav className="navbar">
+
+                                <a className="navbar-brand" href="#" >
+                                    <img src={Pan} alt="" id='pan' width="60" height="48" />KHANA PAKANA</a>
+                                <p className="cartimage">
+                                    <img src={cartim} width='30px' />
+                        Items{cart.length ? <span style={{ color: 'brown', fontSize: '20px' }}>
+                                        {cart.length}</span> : <span>*</span>}</p>
+
+                            </nav>
+                        </div>
+                            <div className="shopping">
+                                <img src={Thank} id='shop'/>
                                 <h4>Thank you to shop with us</h4>
+        <a href="#" className="btn btn-primary">Go Back To home Page</a>
+
                             </div>
+                            </>
                             :
                             <div>
                                 {alert("Error Please Try Again")}
+                                <Items />
                             </div>
+                            
                 }
 
                 <Footer />
