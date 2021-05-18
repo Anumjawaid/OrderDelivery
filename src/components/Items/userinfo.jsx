@@ -20,6 +20,7 @@ export default function Info({ cart, setCart, pr }) {
     const [orderd, setOrder] = useState()
     const [address, setAddress] = useState()
     const [page, setPage] = useState('/order')
+    function refreshPage() { window. location. reload(false);}
 
 
     const addorder = () => {
@@ -129,7 +130,7 @@ export default function Info({ cart, setCart, pr }) {
                             <div className="shopping">
                                 <img src={Thank} id='shop'/>
                                 <h4>Thank you to shop with us</h4>
-        <a href="#" className="btn btn-primary">Go Back To home Page</a>
+        <a href="#" className="btn btn-primary" onClick={refreshPage}>Go Back To home Page</a>
 
                             </div>
                             </>
