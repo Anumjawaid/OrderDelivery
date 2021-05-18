@@ -1,11 +1,8 @@
 
 .landinghead{
-    /* text-align: start; */
     display:flex;
     justify-content: flex-start;
-    /* flex-direction:column; */
     background-image: none;
-
 }
 
 .headcont{
@@ -20,7 +17,6 @@
 }
 .landtext{
     color:white;
-    /* font-size: 30px; */
     font-weight: bolder;
     font-style: oblique;
     margin-left:70px;
@@ -44,7 +40,6 @@
     justify-content: row;
   }
 .navbar{
-    
     background-image: none;
     color:white;
     position: sticky;
@@ -52,7 +47,6 @@
     
 }
 .orderplace{
-   
     position: fixed;
     bottom: 0px;
     right: 0px; 
@@ -60,7 +54,6 @@
     cursor: pointer;
     float: right;
     /* -webkit-transform: translate(8%,25%); */
-
 }
 .cartimage{
     color:#e9dc27;
@@ -117,8 +110,6 @@
 .aa{
     background-color:rgba(2, 122, 48, 0.856);
   width: 100%;
-  
-
 }
 .cartitemhead{
     display: flex;
@@ -142,7 +133,6 @@
 }
 .nocart{
     margin-top:40px;
-    
     margin-bottom:153px;
     margin-right:100px !important;
     align-items:center;
@@ -158,6 +148,10 @@
     padding:10px;
 }
 /* Info section styles */
+.descim{
+    color:rgba(2, 122, 48, 0.856);
+    border-color: royalblue;
+}
 .usermain{
     margin-top: 20px;
     margin-bottom: 30px;
@@ -180,7 +174,7 @@
 }
 label{
     margin-left: 40px;
-    text-align: center;
+    /* text-align: center; */
 
 }
 input[type],textarea{
@@ -199,9 +193,17 @@ input[type],textarea{
     color:white;
     text-align: center;
     align-items: center;
-    width:100%;
-    
+    width:90%;
     object-fit: cover;
+}
+#textarea{
+    width:15rem;
+    height:5rem;
+
+}
+.co{
+    margin-top:20px;
+    margin-left:20px;
 }
 ul li{
     list-style-type: none;
@@ -253,11 +255,29 @@ ul li{
     .tags{
         margin-left:30px;
     }
-    /* .del ,.remo{
-        padding: .275rem .15rem !important;
-    } */
     .dep{
         padding: .275rem .15rem !important;
         margin-left: 10px !important;
+    }
+    /* info section */
+    .insideinfo{
+        margin-left: 10px;
+    }
+    label{
+        margin-left: 10px;
+    }
+    #textarea{
+        width:15rem;
+        height:5rem;
+
+    }
+    .co{
+        margin-top:20px;
+    }
+    .cartcontainer{
+    width:90%;
+    margin-left:30px;
+
+
     }
 }
