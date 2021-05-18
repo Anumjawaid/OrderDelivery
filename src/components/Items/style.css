@@ -78,7 +78,7 @@
     margin-right:40px;
     display: inline;
 }
-.placeorder,.del,.co{
+.placeorder,.del,.co,.dep{
     /* background-color: #FF9C2E !important; */
     background-color: #e9dc27 !important;
     border-color: #cfc202 !important;
@@ -137,6 +137,8 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 .nocart{
     margin-top:40px;
@@ -226,7 +228,7 @@ ul li{
     margin-right:70px;
     }
     .navbar-brand{
-        font-size: 1.00rem !important;
+        font-size: 0.85rem !important;
         margin-left: 0px;
     }
     #pan{
@@ -243,12 +245,19 @@ ul li{
         
         margin-bottom: 10px;
     }
-    .item{
+    .item ,.cartcard{
         width:17rem !important;
         margin-left: 8px;
         margin-bottom: 2.2rem !important;
     }
     .tags{
         margin-left:30px;
+    }
+    /* .del ,.remo{
+        padding: .275rem .15rem !important;
+    } */
+    .dep{
+        padding: .275rem .15rem !important;
+        margin-left: 10px !important;
     }
 }
