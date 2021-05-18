@@ -60,18 +60,19 @@ export default function Cart({ cart, setCart,pr }) {
                         <nav className="navbar">
 
                             <a className="navbar-brand" href="#" >
-                                <img src={Pan} alt="" width="60" height="48" />KHANA PAKANA</a>
+                                <img src={Pan} alt="" id="pan" width="60" height="48" />KHANA PAKANA</a>
                             <p className="cartimage">
                                 <img src={cartim} width='30px' />Items{cart.length ? <span style={{ color: 'brown', fontSize: '20px' }}> {cart.length}</span> : <span>*</span>}</p>
 
                         </nav>
                     </div>
-                    {cart.length ? <div className="container main">
-                        <div className="cartitemhead">
-
-                            <h3>Your Cart Items</h3>
+                    {cart.length ? 
+                    <div className="container main">
+                        <div className="col-md-12">
+                        <div className="cartitemhead"><h3>Your Cart</h3>
                             <div className="cartbtn">
                                 <button onClick={() => setCart([])} className="btn btn-primary del" >Delete Cart</button>
+                            </div>
                             </div>
                         </div>
 
@@ -83,7 +84,8 @@ export default function Cart({ cart, setCart,pr }) {
                                     <div className="card cartcard" style={{ width: "60rem" }}>
                                         {/* <img src={b[i] }alt="" className="card-img-top"/> */}
                                         <div className="card-body"><h5 className="card-title">{v['name']}</h5>
-                                            <p className='card-text'> Price:{v['price']} Quantity {v['quantity']}</p></div>
+                                            <p className='card-text'> Price:{v['price']} Quantity {v['quantity']}</p>
+                                        </div>
                                         <button key={i} className="btn btn-primary remo" onClick={() => remove(i)}>Remove Item</button>
                                     </div>
 
@@ -92,9 +94,11 @@ export default function Cart({ cart, setCart,pr }) {
 
                             </div>
                         ))}
-                        <div className="col-md-12 total" style={{ marginLeft: '30px' }}>
+                        <div className="col-md-12 " >
+                            <div className="total">
                             <h3>SubTotal  {pr}</h3>
-                            <button className="btn btn-primary del" onClick={()=>navigateto('/userinfo')}>Place Your Order</button>
+                            <button className="btn btn-primary dep" onClick={()=>navigateto('/userinfo')}>Place Your Order</button>
+                            </div>
 
                         </div>
                     </div>
