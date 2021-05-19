@@ -9,8 +9,8 @@ import  {getItems} from '../Admin/index'
 import Cart from './carts'
 import Footer from './footer'
 import cartim from '../UI/cart.png'
-import {Link } from "react-router-dom";
-import Land from '../UI/landimg.png'
+import Cook from'../UI/cooking.png'
+
 
 
 export default function Items () {
@@ -131,8 +131,9 @@ export default function Items () {
         <div className="container ">
         <h3 className='headcont'>What We Are Offering</h3>
                 <div className="row">
-                  
-        {a.length ? a.map((v,i)=>(
+        {a.length ? 
+        
+       a.map((v,i)=>(
             
                     <div className="col-sm-4" key={i}>
                         <div className="card item" style={{width: "18rem"}}>
@@ -145,12 +146,13 @@ export default function Items () {
                         </div>
                     </div>
                     
-        
+       
                 
-        )) : 
+        )): 
         
-        <div><h3>Cooking</h3>
-        <a href="#" className="btn btn-primary">Click Here To Start Cooking Foods</a>
+        <div className='container cook'>
+          <div ><img src={Cook} width='300px' style={{backgroundColor:'rgba(2, 122, 48, 0.856)' ,marginBottom:'20px'}}/></div>
+        <a href="#" className="btn btn-primary cl">Click Here To Start Cooking Foods</a>
         </div>
 
         
