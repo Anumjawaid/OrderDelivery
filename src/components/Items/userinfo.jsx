@@ -7,7 +7,6 @@ import Thank from '../UI/thank.png'
 import Footer from './footer'
 import firebase from '../../config/firebase'
 import Items from './itemsdisplay'
-import {Link} from 'react-router-dom'
 
 
 export default function Info({ cart, setCart, pr }) {
@@ -136,7 +135,7 @@ export default function Info({ cart, setCart, pr }) {
                             </>
                             :
                             <div>
-                                {alert("Error Please Try Again")}
+                                {alert("Error Please Try Again /n Fill All Input Fields")}
                                 <Items />
                             </div>
                             
