@@ -7,6 +7,8 @@
 
 .headcont{
     margin-bottom: 30px;
+    -webkit-text-fill-color: rgba(10, 199, 82, 0.856);
+    -webkit-text-stroke:0.5px rgba(2, 122, 48, 0.856);
     
 }
 .landimg{
@@ -14,6 +16,15 @@
     padding:360px;
     background-repeat: no-repeat;
     
+}
+.cook{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+
 }
 .landtext{
     color:white;
@@ -48,12 +59,12 @@
 }
 .orderplace{
     position: fixed;
-    bottom: 0px;
+    bottom: 10px;
     right: 0px; 
     padding: 20px;
     cursor: pointer;
     float: right;
-    /* -webkit-transform: translate(8%,25%); */
+    -webkit-transform: translate(8%,38%);
 }
 .cartimage{
     color:#e9dc27;
@@ -71,7 +82,7 @@
     margin-right:40px;
     display: inline;
 }
-.placeorder,.del,.co,.dep{
+.placeorder,.del,.co,.dep,.cl{
     /* background-color: #FF9C2E !important; */
     background-color: #e9dc27 !important;
     border-color: #cfc202 !important;
@@ -235,6 +246,8 @@ ul li{
     top:350px;
     cursor: pointer;
     margin-right:70px;
+    -webkit-transform: translate(0%,0%);
+
     }
     .navbar-brand{
         font-size: 0.85rem !important;
