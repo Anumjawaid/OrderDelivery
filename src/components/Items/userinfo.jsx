@@ -135,8 +135,11 @@ export default function Info({ cart, setCart, pr }) {
                             </>
                             :
                             <div>
-                                {alert("Error Please Try Again /n Fill All Input Fields")}
-                                <Items />
+                                {alert("Error Please Try Again \n Fill All Input Fields")
+                                
+                                }
+                                {setPage('/order')}
+                                
                             </div>
                             
                 }
