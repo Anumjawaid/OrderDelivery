@@ -15,40 +15,24 @@ import './style.css';
 export default function Cart({ cart, setCart,pr }) {
     const ITEMS = '/items'
     const CART = '/cart'
-    // let [ncart, setNcart] = useState()
-    // ncart = cart
-
     let [page, setPage] = useState(ITEMS)
-
-
-
     const navigateto = (nextpage) => {
         setPage(nextpage)
-
     }
     const remove = (i) => {
-        // ncart = cart
         console.log("i am working", i)
-        // delete cart[i]
         cart.splice(i, 1)
-        // console.log(ncart)
-        // setTimeout(() => {  setCart(cart) }, 2000);
         setCart([...cart])
         // setNcart(Object.assign({}, ncart)) this can be used as well as setNcart({...ncart})
-        // 
     }
-    const totalprice = () => {
 
+    const totalprice = () => {
         var tp = 0
         cart.map((v, i) => (tp += v['price']))
-        // console.log(tp)
         return tp
     }
 
-
-
     var pr = totalprice()
-    console.log(pr)
 
     return (
 
@@ -75,25 +59,29 @@ export default function Cart({ cart, setCart,pr }) {
                             </div>
                             </div>
                         </div>
+                        <div className="row">
+                            <table id='tab'>
+                                <tr>
+                                <th>Sno</th>
+                                <th>Item Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Add/Remove</th>
+                                </tr>
+                                {
+                                    cart.map((v,i)=>(<tr>
+                                        <td>{i+1}</td>
+                                        <td>{v['name']}</td>
+                                        <td>{v['price']}</td>
+                                        <td>{v['quantity']}</td>
+                                        <td><button key={i} className="btn btn-primary remo" onClick={() => remove(i)}>Remove Item</button></td>
+                                    </tr>))
+                                }
+                                
+                            </table>
+                        </div>
 
-                        {cart.map((v, i) => (
-                            <div className="row">
-
-
-                                <div className="col-md-12" style={{ marginLeft: '50px' }}>
-                                    <div className="card cartcard" style={{ width: "60rem" }}>
-                                        {/* <img src={b[i] }alt="" className="card-img-top"/> */}
-                                        <div className="card-body"><h5 className="card-title">{v['name']}</h5>
-                                            <p className='card-text'> Price:{v['price']} Quantity {v['quantity']}</p>
-                                        </div>
-                                        <button key={i} className="btn btn-primary remo" onClick={() => remove(i)}>Remove Item</button>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        ))}
+                        
                         <div className="col-md-12 " >
                             <div className="total">
                             <h3>SubTotal  {pr}</h3>
