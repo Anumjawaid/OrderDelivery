@@ -1,7 +1,5 @@
 import React,{useState} from 'react'
 import './style.css';
-// import Dates from '../UI/'
-import DatesLand from '../UI/dateslan.JPG'
 import Pan from '../UI/panlogo.png'
 import Roll from '../UI/springroll.JPG'
 import Sam from '../UI/samosay.JPG'
@@ -10,6 +8,12 @@ import Cart from './carts'
 import Footer from './footer'
 import cartim from '../UI/cart.png'
 import Cook from'../UI/cooking.png'
+import chic from '../UI/chickbit.JPG'
+import spicy from '../UI/rolpg.JPG'
+import cheese from '../UI/cheeserol.JPG'
+import spring from '../UI/springrollspicy.JPG'
+import barq from '../UI/barbchick.JPG'
+import chicken from '../UI/chickenroll.JPG'
 
 
 
@@ -17,9 +21,7 @@ export default function Items () {
   const ITEMS='/items'
   const CART='/cart'
   let [page,setPage]=useState(ITEMS)
-
   let [cart,setCart]=useState([])
-  
   
   var cartitems={
     'name':"",
@@ -27,7 +29,7 @@ export default function Items () {
     'day':"",
     "quantity":0
   }
-  let b=[Pan,Roll,Sam,DatesLand,Roll,Sam,Roll,Sam]
+  let b=[chic,barq,barq,Sam,Roll,spring,spicy,cheese,chicken]
     var a=getItems()
     console.log("zxcvb",a)
     var quantity=1
@@ -36,7 +38,6 @@ export default function Items () {
       const checkele=()=>{
         if(cart.length!=0){
         for(var aa=0; aa<cart.length; aa++){
-          // console.log(cart[aa],"for chrck")}
           
         if(i.name==cart[aa].name){
 
@@ -129,7 +130,7 @@ export default function Items () {
         {/*  */}
         <div className="ab">
         <div className="container ">
-        <h3 className='headcont'>What We Are Offering</h3>
+        <h3 className='headcont'>What We Are Offering !!</h3>
                 <div className="row">
         {a.length ? 
         
