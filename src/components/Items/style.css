@@ -254,6 +254,9 @@ ul li{
 /* responsive */
 /* for tablets 768*/
 @media only screen and (max-width: 360px) {
+    .remo{
+        width:90%;
+    }
     .landimg{
         display: none;
     }
