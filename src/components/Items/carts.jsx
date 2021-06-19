@@ -74,7 +74,7 @@ export default function Cart({ cart, setCart,pr }) {
                                         <td>{v['name']}</td>
                                         <td>{v['price']}</td>
                                         <td>{v['quantity']}</td>
-                                        <td><button key={i} className="btn btn-primary remo" onClick={() => remove(i)}>Remove Item</button></td>
+                                        <td><button key={i} className="btn btn-primary remo" onClick={() => remove(i)}>Remove</button></td>
                                     </tr>))
                                 }
                                 
